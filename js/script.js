@@ -4,25 +4,41 @@ const headerMobileBg = document.querySelector('.header-mobile__bg');
 const headerMobileClose = document.querySelector('.header-mobile__close');
 
 headerBurger.addEventListener('click', () => {
-    headerBurger.classList.toggle('active');
-    headerMobile.classList.toggle('active');
+  headerBurger.classList.toggle('active');
+  headerMobile.classList.toggle('active');
 });
 
 headerMobileBg.addEventListener('click', () => {
-    headerBurger.classList.remove('active');
-    headerMobile.classList.remove('active');
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
 })
 
 headerMobileClose.addEventListener('click', () => {
-    headerBurger.classList.remove('active');
-    headerMobile.classList.remove('active');
+  headerBurger.classList.remove('active');
+  headerMobile.classList.remove('active');
 })
 
-window.addEventListener('resize', function() {
-  if (window.innerWidth <= 1030) {
-  document.querySelector('.header__top').insertAdjacentElement('beforeend', document.querySelector('.header__socials'));
-}
-})
+if (window.innerWidth <= 1030) {
+    document.querySelector('.header__top').insertAdjacentElement('beforeend', document.querySelector('.header__socials'));
+  }
+
+if (window.innerWidth <= 800) {
+    if (document.querySelectorAll(".catalog__point:has(.catalog__sublist) .catalog__link")) {
+      var acc = document.querySelectorAll(".catalog__point:has(.catalog__sublist) .catalog__link");
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function (e) {
+          e.preventDefault();
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    }
+  }
 
 const heroSlider = new Swiper('.hero__slider', {
   loop: true,
@@ -56,7 +72,17 @@ const clientsSlider = new Swiper('.clients__slider', {
   loop: true,
   slidesPerView: 4,
   spaceBetween: 20,
-
+  breakpoints: {
+    900: {
+      slidesPerView: 4,
+    },
+    600: {
+      slidesPerView: 3,
+    },
+    1: {
+      slidesPerView: 'auto',
+    },
+  },
   pagination: {
     el: '.clients__pagination',
   },
@@ -65,6 +91,18 @@ const clientsSlider = new Swiper('.clients__slider', {
 
 const similarSlider = new Swiper('.similar__slider', {
   slidesPerView: 4,
+  breakpoints: {
+    800: {
+      slidesPerView: 4,
+    },
+    600: {
+      slidesPerView: 3,
+    },
+    1: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+  },
   pagination: {
     el: '.similar__pagination',
   },
@@ -127,6 +165,15 @@ const productSmallSlider = new Swiper('.product__small-slider', {
   slidesPerView: 4,
   spaceBetween: 10,
   speed: 500,
+  breakpoints: {
+    600: {
+      slidesPerView: 4,
+    },
+
+    1: {
+      slidesPerView: 3,
+    },
+  },
 });
 
 const productBigSlider = new Swiper('.product__big-slider', {
@@ -240,7 +287,27 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 if (document.querySelector('[data-fancybox]')) {
-  Fancybox.bind("[data-fancybox]", {
-    // Your custom options
+  Fancybox.bind("[data-fancybox]", {});
+}
+
+if (document.querySelector('.filter__open')) {
+  const filterBurger = document.querySelector('.filter__open');
+  const filter = document.querySelector('.filter-popup');
+  const filterBg = document.querySelector('.filter-popup__bg');
+  const filterClose = document.querySelector('.filter-popup__close');
+
+  filterBurger.addEventListener('click', () => {
+    filterBurger.classList.toggle('active');
+    filter.classList.toggle('active');
   });
+
+  filterBg.addEventListener('click', () => {
+    filterBurger.classList.remove('active');
+    filter.classList.remove('active');
+  })
+
+  filterClose.addEventListener('click', () => {
+    filterBurger.classList.remove('active');
+    filter.classList.remove('active');
+  })
 }
