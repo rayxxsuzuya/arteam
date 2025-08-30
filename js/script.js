@@ -1,3 +1,29 @@
+const headerBurger = document.querySelector('.header__butter');
+const headerMobile = document.querySelector('.header-mobile');
+const headerMobileBg = document.querySelector('.header-mobile__bg');
+const headerMobileClose = document.querySelector('.header-mobile__close');
+
+headerBurger.addEventListener('click', () => {
+    headerBurger.classList.toggle('active');
+    headerMobile.classList.toggle('active');
+});
+
+headerMobileBg.addEventListener('click', () => {
+    headerBurger.classList.remove('active');
+    headerMobile.classList.remove('active');
+})
+
+headerMobileClose.addEventListener('click', () => {
+    headerBurger.classList.remove('active');
+    headerMobile.classList.remove('active');
+})
+
+window.addEventListener('resize', function() {
+  if (window.innerWidth <= 1030) {
+  document.querySelector('.header__top').insertAdjacentElement('beforeend', document.querySelector('.header__socials'));
+}
+})
+
 const heroSlider = new Swiper('.hero__slider', {
   loop: true,
   slidesPerView: 1,
@@ -12,7 +38,14 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   loop: true,
   slidesPerView: 3,
   spaceBetween: 20,
-
+  breakpoints: {
+    1024: {
+      slidesPerView: 3,
+    },
+    1: {
+      slidesPerView: 1,
+    },
+  },
   pagination: {
     el: '.reviews__pagination',
   },
@@ -42,11 +75,46 @@ const similarSlider = new Swiper('.similar__slider', {
 
 });
 
+const whySlider = new Swiper('.why__slider', {
+  slidesPerView: 4,
+  spaceBetween: 20,
+  breakpoints: {
+    990: {
+      slidesPerView: 4,
+    },
+    700: {
+      slidesPerView: 3,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    1: {
+      slidesPerView: 1,
+    },
+  },
+  pagination: {
+    el: '.why__pagination',
+  },
+});
+
 const alsoSlider = new Swiper('.also__slider', {
   slidesPerView: 3,
   spaceBetween: 20,
   pagination: {
     el: '.also__pagination',
+  },
+  breakpoints: {
+    951: {
+      slidesPerView: 3,
+    },
+
+    600: {
+      slidesPerView: 2,
+    },
+
+    1: {
+      slidesPerView: 1,
+    },
   },
   navigation: {
     prevEl: '.also__arrow.prev',

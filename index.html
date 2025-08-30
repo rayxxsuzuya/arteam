@@ -18,7 +18,7 @@
             <img src="img/icons/phone.svg" width="24" height="24" alt="Телефон">
             +7 (495) 545-4928
           </a>
-          <div class="header__contact">
+          <div class="header__contact address">
             <img src="img/icons/location.svg" width="24" height="24" alt="Адрес">
             Москва, ул. Академика Королева, 13 ст1
           </div>
@@ -29,6 +29,9 @@
     <div class="header__main">
       <div class="container">
         <div class="header__block">
+          <button class="header__butter">
+            <img src="img/icons/burger.svg" width="32" height="32" alt="Открыть меню">
+          </button>
           <a class="header__logo" href="/">
             <img src="img/logo.png" width="183" height="29" alt="ARTEAM">
           </a>
@@ -92,6 +95,64 @@
       </div>
     </div>
   </header>
+  <div class="header-mobile">
+    <div class="header-mobile__bg"></div>
+    <div class="header-mobile__inner">
+      <div class="header-mobile__top">
+        <a class="header-mobile__logo" href="/">
+          <img src="img/logo.png" width="183" height="29" loading="lazy" alt="ARTEAM">
+        </a>
+        <div class="header-mobile__close">
+          <img src="img/icons/close.svg" width="25" height="25" alt="Закрыть меню">
+        </div>
+      </div>
+      <form class="header__form" action="/">
+            <input class="header__input" type="text" placeholder="Найти">
+            <div class="header__controls">
+              <select id="pet-select">
+                <button>
+                  <selectedcontent></selectedcontent>
+                </button>
+
+                <option value="">Каталог</option>
+                <option value="Винты">
+                  <span class="option-label">Винты</span>
+                </option>
+                <option value="dog">
+                  <span class="option-label">Детали</span>
+                </option>
+                <option value="hamster">
+                  <span class="option-label">Мотор</span>
+                </option>
+
+                <option value="fish">
+                  <span class="option-label">Средства</span>
+                </option>
+                <option value="snake">
+                  <span class="option-label">Ещё</span>
+                </option>
+              </select>
+              <button class="header__search">
+                <img src="img/icons/search.svg" width="18" height="18" alt="Поиск">
+              </button>
+            </div>
+          </form>
+      <nav class="header-mobile__nav">
+        <a class="header-mobile__link" href="#">Главная</a>
+        <a class="header-mobile__link" href="#">Продукция</a>
+        <a class="header-mobile__link" href="#">Проекты</a>
+        <a class="header-mobile__link" href="#">О компании</a>
+        <a class="header-mobile__link" href="#">Новости</a>
+        <a class="header-mobile__link" href="#">Контакты</a>
+      </nav>
+       <a class="header__connect" href="#">Связаться с нами</a>
+      <div class="header__contact address">
+        <img src="img/icons/location.svg" width="24" height="24" alt="Адрес">
+        Москва, ул. Академика Королева, 13 ст1
+      </div>
+      <div class="header__time">Работаем ежедневно с 11:00 до 18:00</div>
+    </div>
+  </div>
   <section class="hero">
     <div class="swiper hero__slider">
       <div class="swiper-wrapper">
@@ -203,7 +264,9 @@
             </div>
             <p class="reviews__post">Промтех</p>
             <h3 class="reviews__name">Владимир Новиков</h3>
-            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы и&nbsp;надежность.<span class="reviews__quote">”</span></p>
+            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и
+              очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы
+              и&nbsp;надежность.<span class="reviews__quote">”</span></p>
           </div>
           <div class="reviews__item swiper-slide">
             <div class="reviews__avatar">
@@ -212,16 +275,21 @@
             </div>
             <p class="reviews__post">Мехстрой 200</p>
             <h3 class="reviews__name">Фарида Ахметова</h3>
-            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы и&nbsp;надежность.<span class="reviews__quote">”</span></p>
+            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и
+              очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы
+              и&nbsp;надежность.<span class="reviews__quote">”</span></p>
           </div>
           <div class="reviews__item swiper-slide">
             <div class="reviews__avatar">
               <img class="reviews__image" src="img/reviews-3.jpg" width="64" height="64" loading="lazy" alt="Аватар">
-              <img class="reviews__flag" src="img/icons/flag-kz.png" width="16" height="16" loading="lazy" alt="Казахстан">
+              <img class="reviews__flag" src="img/icons/flag-kz.png" width="16" height="16" loading="lazy"
+                alt="Казахстан">
             </div>
             <p class="reviews__post">Группа авто решения</p>
             <h3 class="reviews__name">Гилад Амиров</h3>
-            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы и&nbsp;надежность.<span class="reviews__quote">”</span></p>
+            <p class="reviews__text"><span class="reviews__quote">“</span>Сотрудничаем с Артим уже более трех лет и
+              очень довольны качеством их редукторов. Не ошиблись с выбором и теперь видим долгий срок службы
+              и&nbsp;надежность.<span class="reviews__quote">”</span></p>
           </div>
         </div>
         <div class="reviews__pagination swiper-pagination"></div>
@@ -235,7 +303,9 @@
         <div class="service__wrapper">
           <h3 class="main-suptitle">Для бизнеса</h3>
           <h2 class="main-title">Уровень обслуживания</h2>
-          <p class="service__text">Опытные специалисты готовы помочь вам с выбором правильного редуктора, предлагая техническую поддержку на всех этапах сотрудничества. Надежная и быстрая доставка. Удобные и безопасные варианты оплаты.</p>
+          <p class="service__text">Опытные специалисты готовы помочь вам с выбором правильного редуктора, предлагая
+            техническую поддержку на всех этапах сотрудничества. Надежная и быстрая доставка. Удобные и безопасные
+            варианты оплаты.</p>
           <a class="service__link" href="#">Посмотреть каталог</a>
         </div>
       </div>

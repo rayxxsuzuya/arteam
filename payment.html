@@ -18,7 +18,7 @@
             <img src="img/icons/phone.svg" width="24" height="24" alt="Телефон">
             +7 (495) 545-4928
           </a>
-          <div class="header__contact">
+          <div class="header__contact address">
             <img src="img/icons/location.svg" width="24" height="24" alt="Адрес">
             Москва, ул. Академика Королева, 13 ст1
           </div>
@@ -29,6 +29,9 @@
     <div class="header__main">
       <div class="container">
         <div class="header__block">
+          <button class="header__butter">
+            <img src="img/icons/burger.svg" width="32" height="32" alt="Открыть меню">
+          </button>
           <a class="header__logo" href="/">
             <img src="img/logo.png" width="183" height="29" alt="ARTEAM">
           </a>
@@ -92,6 +95,64 @@
       </div>
     </div>
   </header>
+  <div class="header-mobile">
+    <div class="header-mobile__bg"></div>
+    <div class="header-mobile__inner">
+      <div class="header-mobile__top">
+        <a class="header-mobile__logo" href="/">
+          <img src="img/logo.png" width="183" height="29" loading="lazy" alt="ARTEAM">
+        </a>
+        <div class="header-mobile__close">
+          <img src="img/icons/close.svg" width="25" height="25" alt="Закрыть меню">
+        </div>
+      </div>
+      <form class="header__form" action="/">
+        <input class="header__input" type="text" placeholder="Найти">
+        <div class="header__controls">
+          <select id="pet-select">
+            <button>
+              <selectedcontent></selectedcontent>
+            </button>
+
+            <option value="">Каталог</option>
+            <option value="Винты">
+              <span class="option-label">Винты</span>
+            </option>
+            <option value="dog">
+              <span class="option-label">Детали</span>
+            </option>
+            <option value="hamster">
+              <span class="option-label">Мотор</span>
+            </option>
+
+            <option value="fish">
+              <span class="option-label">Средства</span>
+            </option>
+            <option value="snake">
+              <span class="option-label">Ещё</span>
+            </option>
+          </select>
+          <button class="header__search">
+            <img src="img/icons/search.svg" width="18" height="18" alt="Поиск">
+          </button>
+        </div>
+      </form>
+      <nav class="header-mobile__nav">
+        <a class="header-mobile__link" href="#">Главная</a>
+        <a class="header-mobile__link" href="#">Продукция</a>
+        <a class="header-mobile__link" href="#">Проекты</a>
+        <a class="header-mobile__link" href="#">О компании</a>
+        <a class="header-mobile__link" href="#">Новости</a>
+        <a class="header-mobile__link" href="#">Контакты</a>
+      </nav>
+      <a class="header__connect" href="#">Связаться с нами</a>
+      <div class="header__contact address">
+        <img src="img/icons/location.svg" width="24" height="24" alt="Адрес">
+        Москва, ул. Академика Королева, 13 ст1
+      </div>
+      <div class="header__time">Работаем ежедневно с 11:00 до 18:00</div>
+    </div>
+  </div>
   <div class="breadcrumb">
     <div class="container">
       <div class="breadcrumb__list">
@@ -101,44 +162,51 @@
       </div>
     </div>
   </div>
-  
+
   <section class="process">
     <div class="container">
       <h1 class="process__title">Процесс Покупки</h1>
-      <p class="process__text">Наш процесс покупки разработан для удобства и <br>прозрачности, чтобы обеспечить вам легкий доступ <br>к нашим высококачественным редукторам.</p>
+      <p class="process__text">Наш процесс покупки разработан для удобства и <br>прозрачности, чтобы обеспечить вам
+        легкий доступ <br>к нашим высококачественным редукторам.</p>
       <div class="why__block second">
         <div class="why__item">
           <div class="why__point">01</div>
           <h3 class="why__caption">Выбор продукт</h3>
-          <p class="why__text">Посетите наш каталог, чтобы выбрать <br>из широкого ассортимента планетарных, <br>конических и волновых редукторов.</p>
+          <p class="why__text">Посетите наш каталог, чтобы выбрать <br>из широкого ассортимента планетарных,
+            <br>конических и волновых редукторов.</p>
         </div>
         <div class="why__item">
           <div class="why__point">02</div>
           <h3 class="why__caption">Консультация специалиста</h3>
-          <p class="why__text">Наши опытные специалисты  готовы <br>помочь вам сделать правильный выбор, <br>предоставив необходимую техническую  поддержку.</p>
+          <p class="why__text">Наши опытные специалисты готовы <br>помочь вам сделать правильный выбор, <br>предоставив
+            необходимую техническую  поддержку.</p>
         </div>
         <div class="why__item">
           <div class="why__point">03</div>
           <h3 class="why__caption">Оформление заказа</h3>
-          <p class="why__text">Заполните форму заказа на сайте или <br>свяжитесь с нами по телефону. Мы <br>гарантируем быстрый и точный ответ <br>на ваш запрос.</p>
+          <p class="why__text">Заполните форму заказа на сайте или <br>свяжитесь с нами по телефону. Мы <br>гарантируем
+            быстрый и точный ответ <br>на ваш запрос.</p>
         </div>
         <div class="why__item large">
           <div class="why__point">04</div>
           <h3 class="why__caption">Оплата</h3>
-          <p class="why__text">Мы предлагаем удобные и безопасные способы <br>оплаты, включая банковские переводы и оплату картой.</p>
+          <p class="why__text">Мы предлагаем удобные и безопасные способы <br>оплаты, включая банковские переводы и
+            оплату картой.</p>
         </div>
         <div class="why__item large">
           <div class="why__point">05</div>
           <h3 class="why__caption">Доставка</h3>
-          <p class="why__text">Мы обеспечиваем быструю и надежную <br>доставку по всей территории России и Казахстана.</p>
+          <p class="why__text">Мы обеспечиваем быструю и надежную <br>доставку по всей территории России и Казахстана.
+          </p>
         </div>
       </div>
     </div>
   </section>
-<section class="projects second">
+  <section class="projects second">
     <div class="container">
       <h2 class="projects__title">Гарантия</h2>
-      <p class="projects__subtitle">Мы уверены в надежности нашей продукции и <br>предоставляем расширенную гарантию на все редукторы.</p>
+      <p class="projects__subtitle">Мы уверены в надежности нашей продукции и <br>предоставляем расширенную гарантию на
+        все редукторы.</p>
       <div class="features__block">
         <a class="features__item second" href="#">
           <img class="features__image" src="img/garan-1.jpg" width="355" height="180" loading="lazy" alt="Картинка">
@@ -148,67 +216,77 @@
         <a class="features__item second" href="#">
           <img class="features__image" src="img/garan-2.jpg" width="355" height="180" loading="lazy" alt="Картинка">
           <span class="features__caption">Условия гарантии</span>
-          <p class="features__text">Гарантия распространяется на дефекты <br>материалов и производственные дефекты. <br>Гарантийный ремонт или замена <br>производится бесплатно.</p>
+          <p class="features__text">Гарантия распространяется на дефекты <br>материалов и производственные дефекты.
+            <br>Гарантийный ремонт или замена <br>производится бесплатно.</p>
         </a>
         <a class="features__item second" href="#">
           <img class="features__image" src="img/garan-3.jpg" width="355" height="180" loading="lazy" alt="Картинка">
           <span class="features__caption">Поддержка клиентов</span>
-          <span class="features__text">В случае возникновения проблем, <br>наши специалисты всегда готовы <br>предоставить техническую поддержку <br>и оперативно решить любой вопрос.</span>
+          <span class="features__text">В случае возникновения проблем, <br>наши специалисты всегда готовы
+            <br>предоставить техническую поддержку <br>и оперативно решить любой вопрос.</span>
         </a>
       </div>
     </div>
-  </section> 
+  </section>
   <section class="process second">
     <div class="container">
       <h1 class="process__title">Почему выбирают нас?</h1>
-      <div class="why__block third">
-        <div class="why__item">
-          <div class="why__point">01</div>
-          <h3 class="why__caption">Надежность</h3>
-          <p class="why__text">Высокое качество материалов <br>и технологии производства <br>гарантируют долгий срок <br>службы и износостойкость.</p>
+        <div class="why__slider swiper">
+          <div class="swiper-wrapper">
+            <div class="why__item swiper-slide">
+              <div class="why__point">01</div>
+              <h3 class="why__caption">Надежность</h3>
+              <p class="why__text">Высокое качество материалов <br>и технологии производства <br>гарантируют долгий срок
+                <br>службы и износостойкость.</p>
+            </div>
+            <div class="why__item swiper-slide">
+              <div class="why__point">02</div>
+              <h3 class="why__caption">Профессионализм</h3>
+              <p class="why__text">Опытные специалисты <br>помогут вам на всех этапах <br>сотрудничества.</p>
+            </div>
+            <div class="why__item swiper-slide">
+              <div class="why__point">03</div>
+              <h3 class="why__caption">Удобство</h3>
+              <p class="why__text">Прозрачный процесс <br>покупки и удобные <br>варианты оплаты.</p>
+            </div>
+            <div class="why__item swiper-slide">
+              <div class="why__point">04</div>
+              <h3 class="why__caption">Гарантия</h3>
+              <p class="why__text">Расширенная гарантия <br>и поддержка клиентов <br>обеспечивают ваше <br>спокойствие и
+                уверенность <br>в надежности нашей <br>продукции.</p>
+            </div>
+          </div>
+          <div class="why__pagination swiper-pagination"></div>
         </div>
-        <div class="why__item">
-          <div class="why__point">02</div>
-          <h3 class="why__caption">Профессионализм</h3>
-          <p class="why__text">Опытные специалисты <br>помогут вам на всех этапах <br>сотрудничества.</p>
-        </div>
-        <div class="why__item">
-          <div class="why__point">03</div>
-          <h3 class="why__caption">Удобство</h3>
-          <p class="why__text">Прозрачный процесс <br>покупки и удобные <br>варианты оплаты.</p>
-        </div>
-        <div class="why__item">
-          <div class="why__point">04</div>
-          <h3 class="why__caption">Гарантия</h3>
-          <p class="why__text">Расширенная гарантия <br>и поддержка клиентов <br>обеспечивают ваше <br>спокойствие и уверенность <br>в надежности нашей <br>продукции.</p>
-        </div>
-        
-      </div>
     </div>
   </section>
-<section class="projects third">
+  <section class="projects third">
     <div class="container">
       <h2 class="projects__title">Дополнительные Услуги</h2>
-      <p class="projects__subtitle">Мы предлагаем широкий спектр дополнительных услуг <br>для максимального удовлетворения ваших потребностей.</p>
+      <p class="projects__subtitle">Мы предлагаем широкий спектр дополнительных услуг <br>для максимального
+        удовлетворения ваших потребностей.</p>
       <div class="features__block">
         <a class="features__item second" href="#">
           <img class="features__image" src="img/serv-1.jpg" width="355" height="180" loading="lazy" alt="Картинка">
           <span class="features__caption">Технические консультации</span>
-          <span class="features__text">Наши специалисты предоставляют <br>консультации по установке и <br>эксплуатации редукторов.</span>
+          <span class="features__text">Наши специалисты предоставляют <br>консультации по установке и <br>эксплуатации
+            редукторов.</span>
         </a>
         <a class="features__item second" href="#">
           <img class="features__image" src="img/serv-2.jpg" width="355" height="180" loading="lazy" alt="Картинка">
           <span class="features__caption">Постгарантийное обслуживание</span>
-          <p class="features__text">Мы предлагаем услуги постгарантийного <br>обслуживания, чтобы ваши редукторы <br>продолжали работать с максимальной <br>эффективностью.</p>
+          <p class="features__text">Мы предлагаем услуги постгарантийного <br>обслуживания, чтобы ваши редукторы
+            <br>продолжали работать с максимальной <br>эффективностью.</p>
         </a>
         <a class="features__item second" href="#">
           <img class="features__image" src="img/serv-3.jpg" width="355" height="180" loading="lazy" alt="Картинка">
           <span class="features__caption">Запасные части</span>
-          <span class="features__text">Всегда в наличии широкий <br>ассортимент запасных частей для <br>оперативного ремонта и обслуживания.</span>
+          <span class="features__text">Всегда в наличии широкий <br>ассортимент запасных частей для <br>оперативного
+            ремонта и обслуживания.</span>
         </a>
       </div>
     </div>
-  </section> 
+  </section>
   <footer class="footer">
     <div class="footer__t">
       <div class="container">
