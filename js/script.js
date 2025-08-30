@@ -37,6 +37,10 @@ if (window.innerWidth <= 800) {
           }
         });
       }
+
+      document.querySelectorAll(".catalog__point:has(.catalog__sublist):first-child .catalog__link").forEach(item => {
+        item.click();
+      })
     }
   }
 
@@ -214,19 +218,53 @@ function updatePlus(e) {
   }
 }
 
-const filterItems = document.querySelectorAll('.filter__item:has(.filter__list) .filter__button');
-const filterSubmits = document.querySelectorAll('.filter__item:has(.filter__list) .filter__submit');
+const filterItems = document.querySelectorAll('.filter__item');
 
 filterItems.forEach(item => {
-  item.addEventListener('click', function (e) {
-    item.parentElement.classList.toggle('active');
-  })
+  const button = item.querySelector('.filter__button');
+
+  button.addEventListener('click', (e) => {
+    e.stopPropagation(); // чтобы клик не "распространялся" на документ
+
+    // Удаляем активность у всех
+    filterItems.forEach(other => {
+      if (other !== item) {
+        other.classList.remove('active');
+      }
+    });
+    // Переключаем активность у текущего
+    item.classList.toggle('active');
+  });
 });
-filterSubmits.forEach(item => {
-  item.addEventListener('click', function (e) {
+
+// Обработка клика внутри dropdown, чтобы не закрывать его
+// Можно оставить, чтобы закрывать только при клике вне
+document.addEventListener('click', () => {
+  filterItems.forEach(item => {
+    item.classList.remove('active');
+  });
+});
+
+const dropdowns = document.querySelectorAll('.filter__dropdown');
+
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+});
+
+const filterSubmits = document.querySelectorAll('.filter__submit');
+
+filterSubmits.forEach(submitBtn => {
+  submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    item.closest('.filter__item').classList.remove('active');
-  })
+
+    // Находим родительский .filter__item и закрываем его
+    const filterItem = submitBtn.closest('.filter__item');
+    if (filterItem) {
+      filterItem.classList.remove('active');
+    }
+  });
 });
 
 if (document.getElementById('fileInput')) {
